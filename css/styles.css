@@ -1,11 +1,46 @@
+/* GENERAL */
 :root {
+  --background-color-hero: #49BCF1;
+  --bckground-color-yellow: #F8D50E;
+  --color-pink: #FE7565;
+  --color-light-green: #77C7B8;
+  --color-light-blue: #6AC7F5;
+  --color-white: #fff;
+  --color-link-text: #808397;
+  --font-stack: 'Fraunces 9pt', "Arial", sans-serif;
+  --font-barlow: 'Barlow', 'Arial', sans-serif;
 }
 
-/* GENERAL */
+@font-face {
+  font-family: 'Fraunces 9pt';
+  src: url('../fonts/Fraunces9pt-Black.woff2') format('woff2'),
+  url('../fonts/Fraunces9pt-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('../fonts/Barlow-Regular.woff2') format('woff2'),
+  url('../fonts/Barlow-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('../fonts/Barlow-Bold.woff2') format('woff2'),
+  url('../fonts/Barlow-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   box-sizing: border-box;
   height: 100%;
-  scroll-behavior: smooth;
 }
 
 *,
@@ -14,38 +49,83 @@ html {
   box-sizing: inherit;
 }
 
+
 body {
   display: flex;
   flex-direction: column;
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
-  background-color: #fff;
+  font-family: var(--font-stack);
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-
-/* CONTAINER */
 .container {
-  max-width: 900px;
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 100%;
+  max-width: 1390px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* MOBILE VERSION  */
+
+.site-header {
+  padding-top: 32px;
+  padding-bottom: 35px;
+  background-color: var(--background-color-hero);
+}
+
+.site-header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header__link {
+  text-decoration: none;
+}
+
+.logo-site {
+  display: block;
+}
+
+.site-header__btn {
+  background-color: transparent;
+  border: 0;
+  width: 24px;
+  height: 18px;
+  background-image: url("../img/icon-burger-white-mobile.svg");
+  background-repeat: no-repeat;
+}
+
+.sitenav {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.sitenav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sitenav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.sitenav__link {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: -0.142857px;
+  color: var(--color-link-text);
+  font-family: var(--font-barlow);
 }
