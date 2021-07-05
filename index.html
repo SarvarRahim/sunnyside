@@ -5,37 +5,86 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sunnyside</title>
-  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
   <header class="site-header">
     <div class="container">
-    <div class="site-header__content">
-      <a class="site-header__link logo" href="index.html">
-        <img class="logo-site" src="img/logo-site.svg" alt="logo site" width="124" height="24">
-      </a>
+      <div class="site-header__content">
+        <a class="site-header__link logo" href="index.html">
+          <img class="logo-site" src="img/logo-site.svg" alt="logo site" width="124" height="24">
+        </a>
 
-      <button class="btn site-header__btn" type="button" aria-label="navigation"></button>
+        <button class="btn site-header__btn js-site-header__toggler" type="button" aria-label="navigation"></button>
+
+        <nav class="sitenav">
+          <ul class="sitenav__list">
+            <li class="sitenav__item">
+              <a class="sitenav__link" href="about.html">About</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link" href="services.html">Services</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link" href="project.html">Projects</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link sitenav__link--contact" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-
-    <nav class="sitenav">
-      <ul class="sitenav__list">
-        <li class="sitenav__item">
-          <a class="sitenav__link" href="about.html">About</a>
-        </li>
-        <li class="sitenav__item">
-          <a class="sitenav__link" href="services.html">Services</a>
-        </li>
-        <li class="sitenav__item">
-          <a class="sitenav__link" href="project.html">Projects</a>
-        </li>
-        <li class="sitenav__item">
-          <a class="sitenav__link" href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
   </header>
+
+  <div class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <h1 class="hero__title">We are creatives</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRASFORM YOUR BRAND  -->
+
+  <section class="brand">
+    <div class="brand-text__box">
+      <div class="brand-content">
+        <h2 class="brand__head">Transform your brand</h2>
+        <p class="brand__desc">We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
+        <a class="brand__link" href="#">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="BRAND">
+    <div class="brand-text__box brand-text__box--glass">
+      <div class="brand-content">
+        <h2 class="brand__head">Stand out to the right audience</h2>
+        <p class="brand__desc">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. </p>
+        <a class="brand__link brand__link--glass" href="#">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="jobs-wrapper">
+    <section class="design">
+      <div class="design__inner">
+      <h2 class="design__title">Graphic Design</h2>
+      <p class="design__text">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+    </div>
+    </section>
+
+    <section class="design design--photography">
+      <div class="design__inner">
+      <h2 class="design__title">Photography</h2>
+      <p class="design__text">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+    </div>
+    </section>
+  </section>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
